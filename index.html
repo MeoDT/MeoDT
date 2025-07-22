@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeoDT | Innovative Software Solutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    <span>MeoDT</span>
+                </div>
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="home">Home</button>
+                    <button class="tab-btn" data-tab="software">Software</button>
+                    <button class="tab-btn" data-tab="ai">KI-Support</button>
+                    <button class="tab-btn" data-tab="pricing">Preise</button>
+                    <button class="tab-btn" data-tab="news">Neuigkeiten</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Home Tab -->
+        <div id="home" class="tab-content active">
+            <section class="hero">
+                <h1>Innovative Software für alle</h1>
+                <p>MeoDT entwickelt leistungsstarke, zugängliche Software die kostenlos nutzbar ist. Schalte Premium-Funktionen frei, um deine Erfahrung zu verbessern.</p>
+                <div>
+                    <a href="#software" class="btn"><i class="fas fa-download"></i> Kostenlos herunterladen</a>
+                    <a href="#pricing" class="btn btn-outline">Premium-Funktionen</a>
+                </div>
+            </section>
+            
+            <section class="features">
+                <h2 style="text-align: center; margin: 50px 0 30px;">Warum MeoDT?</h2>
+                <div class="gallery">
+                    <div class="software-card">
+                        <div class="software-img">
+                            <i class="fas fa-unlock-alt"></i>
+                        </div>
+                        <div class="software-content">
+                            <h3>Kostenlose Kernfunktionen</h3>
+                            <p>Alle unsere Software kommt mit leistungsstarken kostenlosen Funktionen.</p>
+                            <div class="features">
+                                <div class="feature"><i class="fas fa-check-circle"></i> Keine versteckten Kosten</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Regelmäßige Updates</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Community-Support</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="software-card">
+                        <div class="software-img">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="software-content">
+                            <h3>Premium-Upgrades</h3>
+                            <p>Verbessere deine Erfahrung mit Premium-Funktionen für Power-User.</p>
+                            <div class="features">
+                                <div class="feature"><i class="fas fa-check-circle"></i> Erweiterte Tools</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Priorisierter Support</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Exklusive Inhalte</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="software-card">
+                        <div class="software-img">
+                            <i class="fas fa-sync-alt"></i>
+                        </div>
+                        <div class="software-content">
+                            <h3>Einfache Updates</h3>
+                            <p>Unsere Galerie wird automatisch mit den neuesten Versionen aktualisiert.</p>
+                            <div class="features">
+                                <div class="feature"><i class="fas fa-check-circle"></i> GitHub-basierte Updates</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Automatische Benachrichtigungen</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Einfache Verwaltung</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <div class="github-instructions">
+                <h3>So aktualisierst du den Inhalt auf GitHub</h3>
+                <p>Um Software, KI-Antworten oder Neuigkeiten zu aktualisieren:</p>
+                <ol>
+                    <li>Editiere die <code>data.js</code> Datei in deinem GitHub Repository</li>
+                    <li>Aktualisiere die JSON-Objekte für Software, aiResponses oder news</li>
+                    <li>Commite deine Änderungen</li>
+                    <li>GitHub Pages aktualisiert die Website automatisch</li>
+                </ol>
+            </div>
+        </div>
+        
+        <!-- Software Gallery Tab -->
+        <div id="software" class="tab-content">
+            <h2>Unsere Software-Sammlung</h2>
+            <p>Entdecke unsere kostenlose Software. Premium-Funktionen sind mit <span class="premium-feature">★</span> markiert.</p>
+            
+            <div class="gallery" id="software-gallery">
+                <!-- Software cards werden dynamisch geladen -->
+            </div>
+            <div class="spinner" id="gallery-spinner"></div>
+        </div>
+        
+        <!-- AI Support Tab -->
+        <div id="ai" class="tab-content">
+            <section class="ai-section">
+                <div class="ai-header">
+                    <div class="ai-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h2>KI-Support Assistent</h2>
+                </div>
+                
+                <div class="chat-container" id="chat-container">
+                    <div class="message bot-message">
+                        Hallo! Ich bin der KI-Support von MeoDT. Wie kann ich dir helfen? Du kannst Fragen zu unserer Software, Premium-Funktionen oder Downloads stellen.
+                    </div>
+                </div>
+                
+                <div class="input-container">
+                    <input type="text" class="ai-input" id="user-input" placeholder="Stelle hier deine Frage...">
+                    <button class="send-btn" id="send-btn">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Pricing Tab -->
+        <div id="pricing" class="tab-content">
+            <h2>Wähle deinen Plan</h2>
+            <p>Alle Software ist kostenlos nutzbar. Upgrade für Premium-Funktionen und erweiterte Möglichkeiten.</p>
+            
+            <div class="pricing">
+                <div class="pricing-card">
+                    <h3>Kostenloser Plan</h3>
+                    <div class="price">€0 <span>/ für immer</span></div>
+                    <div class="features">
+                        <div class="feature"><i class="fas fa-check"></i> Zugang zu allen Kernfunktionen</div>
+                        <div class="feature"><i class="fas fa-check"></i> Community-Support</div>
+                        <div class="feature"><i class="fas fa-check"></i> Regelmäßige Updates</div>
+                        <div class="feature"><i class="fas fa-check"></i> Grundlegende Anpassungen</div>
+                    </div>
+                    <a href="#software" class="btn" style="margin-top: 20px;">Jetzt starten</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Premium Plan</h3>
+                    <div class="price">€9.99 <span>/ Monat</span></div>
+                    <div class="features">
+                        <div class="feature"><i class="fas fa-check"></i> Alle kostenlosen Funktionen</div>
+                        <div class="feature"><i class="fas fa-check"></i> Erweiterte Tools & Funktionen</div>
+                        <div class="feature"><i class="fas fa-check"></i> Priorisierter Support</div>
+                        <div class="feature"><i class="fas fa-check"></i> Früher Zugang zu neuer Software</div>
+                        <div class="feature"><i class="fas fa-check"></i> Cloud-Speicher (10GB)</div>
+                    </div>
+                    <a href="#" class="btn" style="margin-top: 20px;">Jetzt upgraden</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3>Team Plan</h3>
+                    <div class="price">€49.99 <span>/ Monat</span></div>
+                    <div class="features">
+                        <div class="feature"><i class="fas fa-check"></i> Alles aus Premium</div>
+                        <div class="feature"><i class="fas fa-check"></i> Bis zu 5 Benutzer</div>
+                        <div class="feature"><i class="fas fa-check"></i> Zentrale Abrechnung</div>
+                        <div class="feature"><i class="fas fa-check"></i> Kollaborations-Tools</div>
+                        <div class="feature"><i class="fas fa-check"></i> Cloud-Speicher (100GB)</div>
+                        <div class="feature"><i class="fas fa-check"></i> Persönlicher Account-Manager</div>
+                    </div>
+                    <a href="#" class="btn" style="margin-top: 20px;">Team-Zugang erhalten</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- News Tab -->
+        <div id="news" class="tab-content">
+            <h2>Aktuelles & Neuigkeiten</h2>
+            <p>Bleibe informiert über neue Releases und Unternehmensupdates.</p>
+            
+            <div class="news-container" id="news-container">
+                <!-- News werden dynamisch geladen -->
+            </div>
+        </div>
+    </main>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
