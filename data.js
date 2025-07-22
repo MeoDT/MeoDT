@@ -82,4 +82,10 @@ const newsData = [
     title: "Website got setup",
     content: "The website got released",
   },
+    {
+    id: 2,
+    date: "22.7.25",
+    title: "Website got updatet completly",
+    content: "Better Ai and overall the intire webside",
+  },
 ];
