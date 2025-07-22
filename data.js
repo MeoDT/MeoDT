@@ -2,50 +2,56 @@ const softwareData = [
   {
     id: 1,
     name: "MeoKL",
-    description: "Advanced Roblox executer",
+    description: "A modern Roblox executor for smooth and secure script execution.",
     icon: "fas fa-image",
     isFree: true,
-    features: ["Injecting", "Online Virus-free scripts", "Faster exploit ★"],
+    features: [
+      "Injecting",
+      "Online virus-free scripts",
+      "Faster exploit ★"
+    ],
   },
-    {
+  {
     id: 2,
     name: "Cloudstorage",
-    description: "Advanced Roblox executer",
+    description: "Reliable global cloud storage for your Roblox files.",
     icon: "fas fa-image",
     isFree: false,
-    features: ["Storage all over the world", "fast downloading"],
+    features: [
+      "Storage all over the world",
+      "Fast downloading"
+    ],
   },
   {
     id: 3,
     name: "MeoKLient",
-    description: "Minecraft Launcher/client",
+    description: "A flexible Minecraft launcher and client with extra tools and custom options.",
     icon: "fas fa-laptop-code",
     isFree: true,
     features: [
-      "Offline and Online support",
+      "Offline and online support",
       "Offline skins",
-      "Easy selfhost server",
+      "Easy self-host server",
       "Free server from MeoKL ★",
-      "Free Cosmetics ★",
-      "Custom Capes and Batches ★",
+      "Free cosmetics ★",
+      "Custom capes and badges ★"
     ],
   },
   {
     id: 4,
     name: "Piratebay",
-    description: "The Appstore for pirated stuff",
+    description: "A digital hub for accessing free games, music, movies and indie content.",
     icon: "fas fa-lock",
     isFree: true,
     features: [
-      "Free Games, Music, Movies and more!",
-      "Auto Antivirus scan",
-      "Indie games with ads purchaches available",
-      "Prioritised Antivirus scan ★",
-      "Less ads for indie ★",
+      "Free games, music, movies and more!",
+      "Auto antivirus scan",
+      "Indie games with ads purchases available",
+      "Prioritised antivirus scan ★",
+      "Fewer ads for indie ★"
     ],
   },
 ];
-
 
 const aiResponses = {
   help: "hello, hi, free, premium, download, update, function, price, thanks, bye, default, support, bug, features, license, refund, account, login, signup, forgotpassword, contact, roadmap, team",
