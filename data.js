@@ -40,7 +40,7 @@ const softwareData = [
   {
     id: 4,
     name: "Piratebay",
-    description: "A digital hub for accessing free games, music, movies and indie content.",
+    description: "A digital hub for accessing free games, music, movies and indie content. All downloaded from Piratewebsites, secured through Virustotal",
     icon: "fas fa-lock",
     isFree: true,
     features: [
@@ -54,6 +54,7 @@ const softwareData = [
 ];
 
 const aiResponses = {
+  hgai: "hello, im not a ai as you know it. im not very smart",
   help: "hello, hi, free, premium, download, update, function, price, thanks, bye, default, support, bug, features, license, refund, account, login, signup, forgotpassword, contact, roadmap, team",
   hello: "Hello! How can I help you with MeoDT Software?",
   hi: "Hi! How can I assist you?",
@@ -83,13 +84,13 @@ const aiResponses = {
 // Neuigkeiten
 const newsData = [
   {
-    id: 1,
+    id: 2,
     date: "22.7.25",
     title: "Website got setup",
     content: "The website got released",
   },
     {
-    id: 2,
+    id: 1,
     date: "22.7.25",
     title: "Website got updatet completly",
     content: "Better Ai and overall the intire webside",
