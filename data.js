@@ -8,7 +8,7 @@ const softwareData = [
     features: ["Injecting", "Online Virus-free scripts", "Faster exploit ★"],
   },
     {
-    id: 4,
+    id: 2,
     name: "Cloudstorage",
     description: "Advanced Roblox executer",
     icon: "fas fa-image",
@@ -16,7 +16,7 @@ const softwareData = [
     features: ["Storage all over the world", "fast downloading"],
   },
   {
-    id: 2,
+    id: 3,
     name: "MeoKLient",
     description: "Minecraft Launcher/client",
     icon: "fas fa-laptop-code",
@@ -31,7 +31,7 @@ const softwareData = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     name: "Piratebay",
     description: "The Appstore for pirated stuff",
     icon: "fas fa-lock",
@@ -46,8 +46,9 @@ const softwareData = [
   },
 ];
 
-// KI-Antworten
+
 const aiResponses = {
+  help: "hello, hi, free, premium, download, update, function, price, thanks, bye, default, support, bug, features, license, refund, account, login, signup, forgotpassword, contact, roadmap, team",
   hello: "Hello! How can I help you with MeoDT Software?",
   hi: "Hi! How can I assist you?",
   free: "All our core software is completely free. You can find it in the Software tab.",
