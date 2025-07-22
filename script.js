@@ -1,20 +1,19 @@
 // Tab-Funktionalität
 document.querySelectorAll('.tab-btn').forEach(button => {
     button.addEventListener('click', () => {
-        // Entferne aktive Klasse von allen Buttons und Inhalten
+
         document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
         document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
         
-        // Füge aktive Klasse zum geklickten Button hinzu
+
         button.classList.add('active');
         
-        // Zeige entsprechenden Inhalt
         const tabId = button.getAttribute('data-tab');
         document.getElementById(tabId).classList.add('active');
     });
 });
 
-// KI-Support Funktionalität
+
 const chatContainer = document.getElementById('chat-container');
 const userInput = document.getElementById('user-input');
 const sendBtn = document.getElementById('send-btn');
@@ -43,8 +42,7 @@ function processUserInput() {
             break;
         }
     }
-    
-    // KI "tippen" simulieren
+
     setTimeout(() => {
         addMessage(response);
     }, 500);
@@ -55,7 +53,7 @@ userInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') processUserInput();
 });
 
-// Funktion zum Rendern der Software-Galerie
+
 function renderSoftwareGallery() {
     const gallery = document.getElementById('software-gallery');
     gallery.innerHTML = '';
@@ -76,7 +74,7 @@ function renderSoftwareGallery() {
         });
         
         card.innerHTML = `
-            ${software.isFree ? '<div class="free-badge">KOSTENLOS</div>' : ''}
+            ${software.isFree ? '<div class="free-badge">FREE</div>' : ''}
             <div class="software-img">
                 <i class="${software.icon}"></i>
             </div>
@@ -87,7 +85,7 @@ function renderSoftwareGallery() {
                     ${featuresHTML}
                 </div>
                 <a href="#" class="btn" style="width: 100%; text-align: center; margin-top: 15px;">
-                    <i class="fas fa-download"></i> Herunterladen
+                    <i class="fas fa-download"></i> Download
                 </a>
             </div>
         `;
@@ -132,6 +130,6 @@ window.addEventListener('DOMContentLoaded', () => {
     
     // Füge Tipp-Nachricht hinzu
     setTimeout(() => {
-        addMessage("Tipp: Du kannst mich nach unserer kostenlosen Software, Premium-Funktionen oder Downloads fragen!");
+        addMessage("Tip: You can ask me about our free software, premium features, or downloads!");
     }, 2000);
 });
