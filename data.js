@@ -76,7 +76,7 @@ const aiResponses = {
 const newsData = [
     {
     id: 4,
-    date: "22.7.25",
+    date: "23.7.25",
     title: "Dark and Whitemode added",
     content: "No Flashing anymore",
   },
