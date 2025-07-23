@@ -1,3 +1,4 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +21,7 @@
                     <button class="tab-btn" data-tab="software">Software</button>
                     <button class="tab-btn" data-tab="ai">AI-Support</button>
                     <button class="tab-btn" data-tab="news">News</button>
+                    <button class="tab-btn" data-tab="donate">Donate</button>
                 </div>
             </div>
         </div>
@@ -44,8 +46,8 @@
                             <i class="fas fa-unlock-alt"></i>
                         </div>
                         <div class="software-content">
-                            <h3>Free core-functions</h3>
-                            <p>All of our software is made to be free</p>
+                            <h3>Completely Free</h3>
+                            <p>All of our software is made to be free forever</p>
                             <div class="features">
                                 <div class="feature"><i class="fas fa-check-circle"></i> No hidden costs</div>
                                 <div class="feature"><i class="fas fa-check-circle"></i> Updates forever</div>
@@ -55,15 +57,15 @@
                     </div>
                     <div class="software-card">
                         <div class="software-img">
-                            <i class="fas fa-star"></i>
+                            <i class="fas fa-heart"></i>
                         </div>
                         <div class="software-content">
-                            <h3>Premium</h3>
-                            <p>Support us and get better software</p>
+                            <h3>Support Us</h3>
+                            <p>Help us keep the software free</p>
                             <div class="features">
-                                <div class="feature"><i class="fas fa-check-circle"></i> Advanced tools</div>
-                                <div class="feature"><i class="fas fa-check-circle"></i> Prioritised support</div>
-                                <div class="feature"><i class="fas fa-check-circle"></i> Exclusive features</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Donate to support development</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Open-source contributions</div>
+                                <div class="feature"><i class="fas fa-check-circle"></i> Community feedback</div>
                             </div>
                         </div>
                     </div>
@@ -83,12 +85,12 @@
                     </div>
                 </div>
             </section>
-        </div> <!-- Closing div for home tab -->
+        </div>
         
         <!-- Software Gallery Tab -->
         <div id="software" class="tab-content">
             <h2>Our Software</h2>
-            <p>Find out about our Software. Premium-features are mentioned with <span class="premium-feature">★</span></p>
+            <p>All our software is completely free to use.</p>
             
             <div class="gallery" id="software-gallery"></div>
             <div class="spinner" id="gallery-spinner"></div>
@@ -106,7 +108,7 @@
                 
                 <div class="chat-container" id="chat-container">
                     <div class="message bot-message">
-                       Hello! I am the AI support from MeoDT. How can I help you? You can ask questions about our software, premium features, or downloads.
+                       Hello! I am the AI support from MeoDT. How can I help you? You can ask questions about our software or downloads.
                     </div>
                 </div>
                 
@@ -119,55 +121,56 @@
             </section>
         </div>
         
-        <!-- Pricing Tab -->
-        <div id="pricing" class="tab-content">
-            <h2>Choose a plan</h2>
-            <p>All of our software is usable for free. If you want to support us and get a reward please checkout our options</p>
-            
-            <div class="pricing">
-                <div class="pricing-card">
-                    <h3>Free plan</h3>
-                    <div class="price">€0 <span>/ forever</span></div>
-                    <div class="features">
-                        <div class="feature"><i class="fas fa-check"></i> Access to all core features</div>
-                        <div class="feature"><i class="fas fa-check"></i> Community support</div>
-                        <div class="feature"><i class="fas fa-check"></i> Regular updates</div>
-                        <div class="feature"><i class="fas fa-check"></i> Basic customization options</div>
-                    </div>
-                    <a href="#software" class="btn" style="margin-top: 20px;">Start now</a>
-                </div>
-                
-                <div class="pricing-card">
-                    <h3>Premium Plan</h3>
-                    <div class="price">€3.99 <span>/ Month</span></div>
-                    <div class="features">
-                        <div class="feature"><i class="fas fa-check"></i> All free features</div>
-                        <div class="feature"><i class="fas fa-check"></i> Advanced tools & features</div>
-                        <div class="feature"><i class="fas fa-check"></i> Priority support</div>
-                        <div class="feature"><i class="fas fa-check"></i> Early access to new software</div>
-                        <div class="feature"><i class="fas fa-check"></i> Cloud storage (15GB)</div>
-                    </div>
-                    <a href="#" class="btn" style="margin-top: 20px;">Upgrade now</a>
-                </div>
-                
-                <div class="pricing-card">
-                    <h3>Premium+ Plan</h3>
-                    <div class="price">€9.99 <span>/ Month</span></div>
-                    <div class="features">
-                        <div class="feature"><i class="fas fa-check"></i> Everything from Premium</div>
-                        <div class="feature"><i class="fas fa-check"></i> Cloud storage (20GB)</div>
-                    </div>
-                    <a href="#" class="btn" style="margin-top: 20px;">Be our Hero</a>
-                </div>
-            </div>
-        </div>
-        
         <!-- News Tab -->
         <div id="news" class="tab-content">
             <h2>News</h2>
             <p>Stay informed about new releases and company updates.</p>
             
             <div class="news-container" id="news-container"></div>
+        </div>
+        
+        <!-- Donate Tab -->
+        <div id="donate" class="tab-content">
+            <h2>Support Our Work</h2>
+            <p>Help us keep the software free by making a donation.</p>
+            
+            <div class="gallery">
+                <div class="software-card">
+                    <div class="software-img">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <div class="software-content">
+                        <h3>One-time Donation</h3>
+                        <p>Make a single contribution to support our work</p>
+                        <div class="features">
+                            <div class="feature"><i class="fas fa-check-circle"></i> Any amount helps</div>
+                            <div class="feature"><i class="fas fa-check-circle"></i> Support development</div>
+                            <div class="feature"><i class="fas fa-check-circle"></i> Keep software free</div>
+                        </div>
+                        <a href="#" class="btn" style="width: 100%; text-align: center; margin-top: 15px;">
+                            <i class="fas fa-donate"></i> Donate Now
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="software-card">
+                    <div class="software-img">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <div class="software-content">
+                        <h3>Monthly Support</h3>
+                        <p>Become a recurring supporter of our project</p>
+                        <div class="features">
+                            <div class="feature"><i class="fas fa-check-circle"></i> Sustained development</div>
+                            <div class="feature"><i class="fas fa-check-circle"></i> Special recognition</div>
+                            <div class="feature"><i class="fas fa-check-circle"></i> Early feature previews</div>
+                        </div>
+                        <a href="#" class="btn" style="width: 100%; text-align: center; margin-top: 15px;">
+                            <i class="fas fa-donate"></i> Become a Supporter
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
