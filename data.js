@@ -1,7 +1,17 @@
 
 const softwareData = [
-  {
+    {
     id: 1,
+    name: "MeoPedia",
+    description: "Ai for searching stuff on Wikipedia without destroying the planet",
+    icon: "fas fa-image",
+    features: [
+      "fast and climate-friendly",
+      "summary of the answer"
+    ],
+  },
+  {
+    id: 2,
     name: "MeoKL",
     description: "A modern Roblox executor for smooth and secure script execution.",
     icon: "fas fa-image",
@@ -11,7 +21,7 @@ const softwareData = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     name: "Cloudstorage",
     description: "Reliable global cloud storage for your files.",
     icon: "fas fa-image",
@@ -22,7 +32,7 @@ const softwareData = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     name: "MeoKLient",
     description: "A flexible Minecraft launcher and client with extra tools and custom options.",
     icon: "fas fa-laptop-code",
@@ -35,7 +45,7 @@ const softwareData = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     name: "Piratebay",
     description: "A digital hub for accessing free games, music, movies and indie content. All downloaded from Piratewebsites, secured through Virustotal",
     icon: "fas fa-lock",
