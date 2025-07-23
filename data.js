@@ -58,7 +58,7 @@ const aiResponses = {
   function: "Our software includes all functions for free.",
   thanks: "You're welcome! Can I help you with anything else?",
   bye: "Goodbye! Feel free to return if you have more questions.",
-  default: "Sorry, I didn't understand that. Could you rephrase your question?",
+  default: "Sorry, I didn't understand that. write 'help' to see all the things i can understand ",
   support: "For technical support, please visit the Support tab or contact us via the Help section.",
   bug: "If you encounter a bug, please report it through our Bug Report form in the Support tab.",
   features: "You can find a list of all available features in the Software tab under each product.",
