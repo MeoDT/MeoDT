@@ -1,18 +1,15 @@
+// script.js
 // Tab-Funktionalität
 document.querySelectorAll('.tab-btn').forEach(button => {
     button.addEventListener('click', () => {
-
         document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
         document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
         
-
         button.classList.add('active');
-        
         const tabId = button.getAttribute('data-tab');
         document.getElementById(tabId).classList.add('active');
     });
 });
-
 
 const chatContainer = document.getElementById('chat-container');
 const userInput = document.getElementById('user-input');
@@ -53,7 +50,6 @@ userInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') processUserInput();
 });
 
-
 function renderSoftwareGallery() {
     const gallery = document.getElementById('software-gallery');
     gallery.innerHTML = '';
@@ -64,17 +60,16 @@ function renderSoftwareGallery() {
         
         let featuresHTML = '';
         software.features.forEach(feature => {
-            const isPremium = feature.includes('★');
             featuresHTML += `
                 <div class="feature">
-                    <i class="fas ${isPremium ? 'fa-crown premium-feature' : 'fa-check'}"></i>
+                    <i class="fas fa-check"></i>
                     ${feature}
                 </div>
             `;
         });
         
         card.innerHTML = `
-            ${software.isFree ? '<div class="free-badge">FREE</div>' : ''}
+            <div class="free-badge">FREE</div>
             <div class="software-img">
                 <i class="${software.icon}"></i>
             </div>
@@ -94,7 +89,6 @@ function renderSoftwareGallery() {
     });
 }
 
-// Funktion zum Rendern der Neuigkeiten
 function renderNews() {
     const container = document.getElementById('news-container');
     container.innerHTML = '';
@@ -111,25 +105,21 @@ function renderNews() {
     });
 }
 
-// Simuliere API-Laden
 function loadSoftwareGallery() {
     const spinner = document.getElementById('gallery-spinner');
     spinner.style.display = 'block';
     
-    // Simuliere API-Anfrageverzögerung
     setTimeout(() => {
         renderSoftwareGallery();
         spinner.style.display = 'none';
     }, 1000);
 }
 
-// Seite initialisieren
 window.addEventListener('DOMContentLoaded', () => {
     renderSoftwareGallery();
     renderNews();
     
-    // Füge Tipp-Nachricht hinzu
     setTimeout(() => {
-        addMessage("Tip: You can ask me about our free software, premium features, or downloads!");
+        addMessage("Tip: You can ask me about our free software or how to support us!");
     }, 2000);
 });
