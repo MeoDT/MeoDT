@@ -1,7 +1,7 @@
-// script.js
-// Tab-Funktionalität
+
 document.querySelectorAll('.tab-btn').forEach(button => {
     button.addEventListener('click', () => {
+
         document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
         document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
         
@@ -10,6 +10,7 @@ document.querySelectorAll('.tab-btn').forEach(button => {
         document.getElementById(tabId).classList.add('active');
     });
 });
+
 
 const chatContainer = document.getElementById('chat-container');
 const userInput = document.getElementById('user-input');
@@ -31,7 +32,7 @@ function processUserInput() {
     addMessage(text, true);
     userInput.value = '';
     
-    // KI-Antwort finden
+
     let response = aiResponses.default;
     for (const [keyword, answer] of Object.entries(aiResponses)) {
         if (text.includes(keyword)) {
@@ -49,6 +50,7 @@ sendBtn.addEventListener('click', processUserInput);
 userInput.addEventListener('keypress', (e) => {
     if (e.key === 'Enter') processUserInput();
 });
+
 
 function renderSoftwareGallery() {
     const gallery = document.getElementById('software-gallery');
@@ -89,6 +91,7 @@ function renderSoftwareGallery() {
     });
 }
 
+
 function renderNews() {
     const container = document.getElementById('news-container');
     container.innerHTML = '';
@@ -99,34 +102,16 @@ function renderNews() {
         item.innerHTML = `
             <div class="news-date">${news.date}</div>
             <div class="news-title">${news.title}</div>
-            <p>${news.content}</p>
+            <p class="news-content">${news.content}</p>
         `;
         container.appendChild(item);
     });
 }
 
-function loadSoftwareGallery() {
-    const spinner = document.getElementById('gallery-spinner');
-    spinner.style.display = 'block';
-    
-    setTimeout(() => {
-        renderSoftwareGallery();
-        spinner.style.display = 'none';
-    }, 1000);
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-    renderSoftwareGallery();
-    renderNews();
-    
-    setTimeout(() => {
-        addMessage("Tip: You can ask me about our free software or how to support us!");
-    }, 2000);
-});
-
 
 const themeToggle = document.getElementById('theme-toggle');
 const body = document.body;
+
 
 const savedTheme = localStorage.getItem('theme') || 'dark';
 body.setAttribute('data-theme', savedTheme);
@@ -149,4 +134,21 @@ function toggleTheme() {
 
 
 themeToggle.addEventListener('click', toggleTheme);
-updateThemeIcon();
+
+window.addEventListener('DOMContentLoaded', () => {
+    renderSoftwareGallery();
+    renderNews();
+    updateThemeIcon();
+    
+ 
+    setTimeout(() => {
+        addMessage("Tip: You can ask me about our free software or how to support us!");
+    }, 2000);
+    
+    
+    const spinner = document.getElementById('gallery-spinner');
+    spinner.style.display = 'block';
+    setTimeout(() => {
+        spinner.style.display = 'none';
+    }, 1000);
+});
