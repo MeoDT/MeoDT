@@ -13,7 +13,7 @@ const softwareData = [
   {
     id: 2,
     name: "Cloudstorage",
-    description: "Reliable global cloud storage for your Roblox files.",
+    description: "Reliable global cloud storage for your files.",
     icon: "fas fa-image",
     features: [
       "Storage all over the world",
