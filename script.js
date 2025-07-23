@@ -123,3 +123,30 @@ window.addEventListener('DOMContentLoaded', () => {
         addMessage("Tip: You can ask me about our free software or how to support us!");
     }, 2000);
 });
+
+
+const themeToggle = document.getElementById('theme-toggle');
+const body = document.body;
+
+const savedTheme = localStorage.getItem('theme') || 'dark';
+body.setAttribute('data-theme', savedTheme);
+
+
+function updateThemeIcon() {
+    const isDark = body.getAttribute('data-theme') === 'dark';
+    themeToggle.innerHTML = isDark ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+}
+
+
+function toggleTheme() {
+    const currentTheme = body.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    body.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateThemeIcon();
+}
+
+
+themeToggle.addEventListener('click', toggleTheme);
+updateThemeIcon();
