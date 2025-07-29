@@ -1,1 +1,78 @@
+<!-- =============== FRONTEND (index.html für GitHub Pages) =============== -->
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEODT - Globale Konto-Datenbank</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Dark/Light Mode Toggle -->
+    <button id="themeToggle">🌙</button>
+    
+    <!-- Navigation -->
+    <nav>
+        <a href="#" data-page="home">Home</a>
+        <a href="#" data-page="downloads">Downloads</a>
+        <a href="#" data-page="about">About & Contact</a>
+        <a href="#" data-page="login">Login/Register</a>
+    </nav>
 
+    <!-- Seitencontainer -->
+    <div id="pageContainer">
+        <!-- Home Seite -->
+        <div id="home" class="page active">
+            <h1>Willkommen bei MEODT</h1>
+            <p>Globale verschlüsselte Konto-Datenbank</p>
+        </div>
+
+        <!-- Downloads Seite -->
+        <div id="downloads" class="page">
+            <h2>Unsere Software</h2>
+            <div class="download-item">
+                <h3>MEODT Client v1.0</h3>
+                <button class="download-btn">Download (Windows)</button>
+                <button class="download-btn">Download (Linux)</button>
+            </div>
+        </div>
+
+        <!-- About & Contact Seite -->
+        <div id="about" class="page">
+            <h2>Über uns</h2>
+            <p>Wir entwickeln sichere Software-Lösungen</p>
+            
+            <h2>Kontakt</h2>
+            <form id="contactForm">
+                <input type="text" placeholder="Name" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Nachricht" required></textarea>
+                <button type="submit">Senden</button>
+            </form>
+        </div>
+
+        <!-- Login/Register Seite -->
+        <div id="login" class="page">
+            <div class="auth-container">
+                <h2>Account erstellen</h2>
+                <form id="registerForm">
+                    <input type="text" placeholder="Benutzername" required>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Passwort" required>
+                    <button type="submit">Registrieren</button>
+                </form>
+                
+                <div class="divider">ODER</div>
+                
+                <h2>Mit Discord anmelden</h2>
+                <button id="discordLogin">
+                    <img src="https://assets-global.website-files.com/6257adef93867e50d84d30e2/636e0b5493894cf60b300587_full_logo_white_RGB.svg" alt="Discord Logo">
+                    Login with Discord
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
